@@ -263,6 +263,11 @@ a {
     font-size: 2rem;
 }
 
+.hero__image {
+    opacity: 0;
+    animation: fadeIn .4s ease-in .3s forwards;
+}
+
 .about__image,
 .contact_image,
 .hero__text {
@@ -395,6 +400,15 @@ a {
 
     .hero__text > strong {
         font-size: 6rem;
+        opacity: 0;
+    }
+
+    .hero__text > strong:first-of-type {
+        animation: fadeIn .4s ease-in .5s forwards;
+    }
+
+    .hero__text > strong:last-of-type {
+        animation: fadeIn .4s ease-in .7s forwards;
     }
 
     .about .content__box > div {
@@ -436,4 +450,13 @@ a {
         max-width: 20rem;
         margin: 2.5rem auto;
     }
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
